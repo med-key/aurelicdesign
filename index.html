@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aurelic Design</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-
   <style>
+    /* =========================
+       FONT SETUP
+       ========================= */
+
+    @font-face {
+      font-family: 'Sanlite';
+      src: url('fonts/SANLITE.TTF') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -18,12 +27,14 @@
     body {
       background: #f7f6f3;
       color: #111;
-      font-smoothing: antialiased;
       -webkit-font-smoothing: antialiased;
       overflow: hidden;
     }
 
-    /* SPLASH */
+    /* =========================
+       SPLASH
+       ========================= */
+
     #splash {
       position: fixed;
       inset: 0;
@@ -32,28 +43,28 @@
       align-items: center;
       justify-content: center;
       z-index: 100;
-      transition: opacity 1.1s ease;
+      transition: opacity 1.2s ease;
     }
 
     .logo {
       text-align: center;
-      transform: scale(0.97);
-      animation: zoomIn 2.4s ease forwards;
+      transform: scale(0.82); /* visible zoom */
+      animation: zoomIn 2.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
     }
 
     .aurelic {
-      font-family: 'Cormorant SC', serif;
+      font-family: 'Sanlite', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
       font-size: 56px;
-      font-weight: 500;
-      letter-spacing: 0.28em;
+      font-weight: 300;
+      letter-spacing: 0.34em;
     }
 
     .design {
-      font-family: 'Lato', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
       font-size: 13px;
-      letter-spacing: 0.42em;
+      letter-spacing: 0.46em;
       margin-top: 14px;
-      opacity: 0.6;
+      opacity: 0.55;
     }
 
     @keyframes zoomIn {
@@ -67,7 +78,10 @@
       pointer-events: none;
     }
 
-    /* HOME */
+    /* =========================
+       HOME
+       ========================= */
+
     #home {
       display: none;
       padding: 80px;
@@ -87,7 +101,7 @@
 
   <!-- HOME -->
   <main id="home">
-    <!-- your homepage content -->
+    <!-- homepage content -->
   </main>
 
   <script>
@@ -100,9 +114,9 @@
           splash.style.display = "none";
           document.getElementById("home").style.display = "block";
           document.body.style.overflow = "auto";
-        }, 1100);
+        }, 1200);
 
-      }, 1900);
+      }, 2100);
     });
   </script>
 
