@@ -28,6 +28,7 @@
       background: #f7f6f3;
       color: #111;
       -webkit-font-smoothing: antialiased;
+      font-family: 'Sanlite', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
       overflow: hidden;
     }
 
@@ -107,12 +108,22 @@
     /* Top center logo */
     .home-logo {
       position: fixed;
-      top: 32px;
+      top: 28px;
       left: 50%;
       transform: translateX(-50%);
-      font-family: 'Sanlite', sans-serif;
+      text-align: center;
+    }
+    
+    .home-logo .aurelic {
       font-size: 18px;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.3em;
+    }
+    
+    .home-logo .design {
+      font-size: 10px;
+      letter-spacing: 0.46em;
+      margin-top: 6px;
+      opacity: 0.55;
     }
 
     /* Menu button */
@@ -198,8 +209,11 @@
     </div>
 
     <!-- UI -->
-    <div class="left-note">EST. AURELIC</div>
-    <div class="home-logo">AURELIC</div>
+    <div class="left-note">JKT —— GLOBAL</div>
+    <div class="home-logo">
+        <div class="aurelic">AURELIC</div>
+        <div class="design">DESIGN</div>
+    </div>
     <div class="menu-btn" id="menuOpen">MENU</div>
 
   </main>
