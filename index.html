@@ -155,13 +155,22 @@
       right: -340px;
       width: 340px;
       height: 100vh;
-      background: rgba(255,255,255,0.25);
+    
+      background: rgba(255, 255, 255, 0.28);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
+    
       padding: 48px;
       transition: right 0.45s ease;
       z-index: 90;
+    
+      /* Depth */
+      box-shadow:
+        -12px 0 24px rgba(0, 0, 0, 0.06),
+        -2px 0 6px rgba(0, 0, 0, 0.04),
+        inset 2px 0 12px rgba(255, 255, 255, 0.35);
     }
+
 
     .sidebar.active {
       right: 0;
