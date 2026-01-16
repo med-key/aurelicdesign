@@ -57,7 +57,7 @@
       font-family: 'Sanlite', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
       font-size: 48px;
       font-weight: 500;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.2em;
     }
 
     .design {
@@ -239,6 +239,108 @@
       transition: transform 0.3s ease;
     }
 
+  /* =====================
+   WOW HERO WITH IMAGE
+   ===================== */
+
+    .wow-hero {
+      position: relative;
+      height: 85vh;
+      padding: 160px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 80px;
+      overflow: hidden;
+    }
+    
+    /* Image block */
+    .hero-image {
+      flex: 0 0 42%;
+      height: 52vh;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.15) contrast(0.95) saturate(0.9);
+      transition: transform 1.4s ease;
+    }
+    
+    /* Subtle life */
+    .wow-hero:hover .hero-image img {
+      transform: scale(1.04);
+    }
+    
+    /* Content */
+    .hero-content {
+      flex: 1;
+      max-width: 560px;
+    }
+    
+    /* Headline */
+    .hero-content h1 {
+      font-size: 72px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 36px;
+    }
+    
+    /* Supporting text */
+    .hero-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      opacity: 0.65;
+      max-width: 420px;
+    }
+    
+    /* Scroll hint */
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      opacity: 0.4;
+    }
+    
+    /* Entrance */
+    .wow-hero > * {
+      animation: heroReveal 1.6s ease forwards;
+    }
+    
+    @keyframes heroReveal {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+     @media (max-width: 900px) {
+      .wow-hero {
+        flex-direction: column;
+        padding: 120px 32px 80px;
+      }
+    
+      .hero-image {
+        width: 100%;
+        height: 360px;
+      }
+    
+      .hero-content h1 {
+        font-size: 44px;
+      }
+    }
+
   </style>
 </head>
 
@@ -259,6 +361,28 @@
     <div class="home-bg">
       <img src="___" alt="">
     </div>
+
+     <!-- Hero -->
+    <section class="hero wow-hero">
+  <div class="hero-image">
+    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+  </div>
+
+  <div class="hero-content">
+
+    <h1>
+      Where digital<br>
+      becomes intentional
+    </h1>
+
+    <p>
+      We design experiences that feel inevitable —
+      refined, intelligent, and quietly unforgettable.
+    </p>
+  </div>
+
+  <div class="hero-scroll">SCROLL</div>
+</section>
 
     <!-- UI -->
     <div class="left-note">JKT — GLOBAL</div>
