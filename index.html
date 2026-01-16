@@ -135,6 +135,15 @@
       font-size: 12px;
       letter-spacing: 0.18em;
       cursor: pointer;
+      opacity: 0.7;
+      transition:
+        opacity 0.3s ease,
+        letter-spacing 0.3s ease;
+    }
+
+    .menu-btn:hover {
+      opacity: 1;
+      letter-spacing: 0.22em;
     }
 
     /* Left top text */
@@ -185,6 +194,15 @@
       font-size: 18px;
       margin-bottom: 28px;
       letter-spacing: 0.08em;
+      position: relative;
+      transition: 
+        opacity 0.35s ease,
+        transform 0.35s ease;
+    }
+    
+    .sidebar nav a:hover {
+      opacity: 0.55;
+      transform: translateX(4px);
     }
 
     .close-btn {
